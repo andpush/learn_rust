@@ -1,4 +1,6 @@
 
+
+
 // Equality is deep in Rust
 fn main() {
     let v1 = vec![2, 4, 6].clone();
@@ -19,4 +21,14 @@ fn main() {
 struct Point {
     x:i32,
     y:i32,
+}
+
+#[cfg(test)]
+mod tests {
+    // this brings everything from parent's scope into this scope
+    use super::*;
+
+    #[test]
+    fn it_adds() {
+    }
 }
